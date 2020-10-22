@@ -44,7 +44,7 @@ class ClientUnificationController extends Controller
         $nuevoRegistro->user_id = $request->user_id;
 
         $nuevoRegistro->save();
-        return view('admin.unification.index');
+        redirect('admin/unification/index');
     }
 
     /**
