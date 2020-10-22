@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'asset_url'  => 'http://servicios.boletea.com/public',
+    'asset_url'  => null,
 
     /*
     |--------------------------------------------------------------------------
