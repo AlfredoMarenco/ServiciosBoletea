@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Asesor;
 use App\Models\ClientUnification;
 use Carbon\Carbon;
 use Livewire\Component;

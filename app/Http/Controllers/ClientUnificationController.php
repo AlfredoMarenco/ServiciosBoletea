@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Asesor;
 use App\Models\ClientUnification;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,8 @@ class ClientUnificationController extends Controller
      */
     public function create()
     {
-        return view('admin.unification.form-add');
+        $asesores = Asesor::all();
+        return view('admin.unification.form-add',compact('asesores'));
     }
 
     /**

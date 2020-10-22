@@ -15,7 +15,12 @@
                             <input type="text" class="form-control" name="descripcion" placeholder="Descripcion de Unificacion">
                         </div>
                         <div class="col-3">
-                            <input type="text" class="form-control" name="asesor_id" placeholder="Asesor">
+                            <select name="asesor_id" id="asesor_id" class="form-control">
+                                @foreach($asesores as $asesor)
+                                    <option value="{{ $asesor->id }}">{{ $asesor->name }}</option>
+                                @endforeach
+                            </select>
+                            <!--<input type="text" class="form-control" name="asesor_id" placeholder="Asesor">-->
                             <input type="hidden" class="form-control" name="user_id" value="{{ auth()->id() }}">
                         </div>
                         <div class="col">
