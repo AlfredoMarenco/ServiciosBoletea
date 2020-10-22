@@ -18,6 +18,7 @@ class UnificationTable extends Component
     {   
         return view('livewire.unification-table',[
             'registros' => ClientUnification::where('descripcion', 'LIKE', "%{$this->search}%")
+            ->orderBy('created_at','DESC')
             ->paginate($this->pagePag),
             'carbon' => new Carbon()
         ]);
