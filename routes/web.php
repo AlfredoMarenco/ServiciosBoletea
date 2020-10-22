@@ -30,5 +30,5 @@ Route::resource('admin/unification', ClientUnificationController::class)
 ]);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return view('admin.unification.index');
 })->name('dashboard');
