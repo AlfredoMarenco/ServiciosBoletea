@@ -15,7 +15,7 @@ class CreateClientUnificationsTable extends Migration
     {
         Schema::create('client_unifications', function (Blueprint $table) {
             $table->id();
-            $table->string('descripcion');
+            $table->string('descripcion')->unique();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('asesor_id');
