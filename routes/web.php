@@ -15,7 +15,7 @@ use App\Http\Controllers\ClientUnificationController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::resource('admin/unification', ClientUnificationController::class)

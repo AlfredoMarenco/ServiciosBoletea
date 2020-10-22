@@ -23,6 +23,7 @@ class UnificationTable extends Component
         
         return view('livewire.unification-table',[
             'registros' => ClientUnification::where('descripcion', 'LIKE', "%{$this->search}%")
+            ->orWhere('asesor_id', 'LIKE', "%{$this->search}%")
             ->paginate($this->pagePag),
             'carbon' => new Carbon()
         ]);
