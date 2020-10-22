@@ -16,7 +16,6 @@ class UnificationTable extends Component
     
     public function render()
     {   
-        
         return view('livewire.unification-table',[
             'registros' => ClientUnification::where('descripcion', 'LIKE', "%{$this->search}%")
             ->orderBy('created_at','DESC')
