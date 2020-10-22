@@ -11,7 +11,9 @@
                 <div class="flex flex-col">
                     <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                         <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-                            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg grid grid-cols-1 place-items-end">
+                            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg grid grid-cols-2 place-items-end">
+                                    <input type="text" class="form-input items-center rounded-md show-sm my-3 block w-full"
+                                    placeholder="Buscar" wire:model="search">
                                     <a href="{{ route('unification.create') }}" class="inline-flex items-center my-3 mr-5 justify-center px-2 py-1 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
                                         Agregar Registro
                                     </a>
@@ -32,6 +34,9 @@
                                         </th>
                                         <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
                                         Fecha de la unificacion
+                                        </th>
+                                        <th class="px-6 py-3 bg-gray-50 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
+                                            -
                                         </th>
                                     </tr>
                                     </thead>
@@ -63,6 +68,10 @@
                                         </td>
                                         <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
                                             {{ $registro->created_at }}
+                                        </td>
+                                        <td class="px-6 py-4 whitespace-no-wrap text-center text-sm leading-5 font-medium">
+                                            <a href="#" class="text-blue-600 hover:text-blue-900">Edit</a>
+                                          </td>
                                     </tr>
                                     @endforeach
                                     </tbody>
