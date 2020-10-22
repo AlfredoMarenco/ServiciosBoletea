@@ -35,7 +35,7 @@
                             </select>
                             <input type="hidden" class="form-control" name="user_id" value="{{ auth()->id() }}">
                         </div>
-                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                        <div class="w-full px-3 mb-6 md:mb-0 grid grid-cols-1 place-items-end">
                             <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">
                                 Agregar Registro
                             </button>
