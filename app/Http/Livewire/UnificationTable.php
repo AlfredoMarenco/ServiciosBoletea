@@ -17,7 +17,7 @@ class UnificationTable extends Component
     {   
         
         return view('livewire.unification-table',[
-            'registros' => ClientUnification::all(),
+            'registros' => ClientUnification::paginate(10),
             'carbon' => new Carbon()
         ]);
     }
