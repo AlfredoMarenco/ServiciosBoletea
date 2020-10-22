@@ -10,6 +10,7 @@ use Livewire\WithPagination;
 class UnificationTable extends Component
 {
     use WithPagination;
+    public $pagePag = '10';
     public $search = '';
     public $carbon;
     
@@ -17,7 +18,8 @@ class UnificationTable extends Component
     {   
         
         return view('livewire.unification-table',[
-            'registros' => ClientUnification::paginate(10),
+            'registros' => ClientUnification::where('descripcion', 'LIKE', "%{$this->search}%")
+            ->paginate($this->pagePag),
             'carbon' => new Carbon()
         ]);
     }

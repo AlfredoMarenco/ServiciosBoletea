@@ -68,6 +68,9 @@
                                 @endforeach
                                 </tbody>
                             </table>
+                            <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8 place-items-end">
+                                {{ $registros->links() }}
+                            </div>
                         </div>
                     </div>
                 </div>
