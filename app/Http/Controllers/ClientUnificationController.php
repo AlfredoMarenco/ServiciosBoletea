@@ -15,7 +15,7 @@ class ClientUnificationController extends Controller
      */
     public function index()
     {
-        $registros = ClientUnification::all();
+        $registros = ClientUnification::orderBy('created_at','DESC')->paginate(10);
         return view('admin.unification.index', compact('registros'));
     }
 
