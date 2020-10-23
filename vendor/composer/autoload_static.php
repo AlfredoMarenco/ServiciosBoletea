@@ -190,6 +190,7 @@ class ComposerStaticInitbbebe818fb07e0cee1d7ac5fcd672fcf
         'A' => 
         array (
             'Asm89\\Stack\\' => 12,
+            'Aprendible\\StorageLinkRoute\\' => 28,
             'App\\' => 4,
         ),
     );
@@ -546,6 +547,10 @@ class ComposerStaticInitbbebe818fb07e0cee1d7ac5fcd672fcf
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
         ),
+        'Aprendible\\StorageLinkRoute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/aprendible/storage-link-route/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -593,8 +598,8 @@ class ComposerStaticInitbbebe818fb07e0cee1d7ac5fcd672fcf
         'App\\Actions\\Jetstream\\UpdateTeamName' => __DIR__ . '/../..' . '/app/Actions/Jetstream/UpdateTeamName.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\ClientUnificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClientUnificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\UserUnificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserUnificationController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Livewire\\UnificationTable' => __DIR__ . '/../..' . '/app/Http/Livewire/UnificationTable.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -610,7 +615,6 @@ class ComposerStaticInitbbebe818fb07e0cee1d7ac5fcd672fcf
         'App\\Models\\Membership' => __DIR__ . '/../..' . '/app/Models/Membership.php',
         'App\\Models\\Team' => __DIR__ . '/../..' . '/app/Models/Team.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
-        'App\\Models\\UserUnification' => __DIR__ . '/../..' . '/app/Models/UserUnification.php',
         'App\\Policies\\TeamPolicy' => __DIR__ . '/../..' . '/app/Policies/TeamPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -621,6 +625,8 @@ class ComposerStaticInitbbebe818fb07e0cee1d7ac5fcd672fcf
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
+        'Aprendible\\StorageLinkRoute\\Http\\Controllers\\StorageLinkController' => __DIR__ . '/..' . '/aprendible/storage-link-route/src/Http/Controllers/StorageLinkController.php',
+        'Aprendible\\StorageLinkRoute\\StorageLinkRouteServiceProvider' => __DIR__ . '/..' . '/aprendible/storage-link-route/src/StorageLinkRouteServiceProvider.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
@@ -796,6 +802,7 @@ class ComposerStaticInitbbebe818fb07e0cee1d7ac5fcd672fcf
         'Database\\Factories\\ClientUnificationFactory' => __DIR__ . '/../..' . '/database/factories/ClientUnificationFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Factories\\UserUnificationFactory' => __DIR__ . '/../..' . '/database/factories/UserUnificationFactory.php',
+        'Database\\Seeders\\ClientUnificationSeeder' => __DIR__ . '/../..' . '/database/seeders/ClientUnificationSeeder.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'Database\\Seeders\\UserUnificationSeeder' => __DIR__ . '/../..' . '/database/seeders/UserUnificationSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
