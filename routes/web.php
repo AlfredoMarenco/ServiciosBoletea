@@ -32,3 +32,8 @@ Route::resource('admin/unification', ClientUnificationController::class)
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+
+Route::get('/storage-link', function () {
+    Artisan::call('storage:link');
+});
