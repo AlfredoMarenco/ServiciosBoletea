@@ -190,7 +190,6 @@ class ComposerStaticInitbbebe818fb07e0cee1d7ac5fcd672fcf
         'A' => 
         array (
             'Asm89\\Stack\\' => 12,
-            'Aprendible\\StorageLinkRoute\\' => 28,
             'App\\' => 4,
         ),
     );
@@ -547,10 +546,6 @@ class ComposerStaticInitbbebe818fb07e0cee1d7ac5fcd672fcf
         array (
             0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
         ),
-        'Aprendible\\StorageLinkRoute\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/aprendible/storage-link-route/src',
-        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -625,8 +620,6 @@ class ComposerStaticInitbbebe818fb07e0cee1d7ac5fcd672fcf
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
-        'Aprendible\\StorageLinkRoute\\Http\\Controllers\\StorageLinkController' => __DIR__ . '/..' . '/aprendible/storage-link-route/src/Http/Controllers/StorageLinkController.php',
-        'Aprendible\\StorageLinkRoute\\StorageLinkRouteServiceProvider' => __DIR__ . '/..' . '/aprendible/storage-link-route/src/StorageLinkRouteServiceProvider.php',
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
