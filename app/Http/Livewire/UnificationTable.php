@@ -14,6 +14,11 @@ class UnificationTable extends Component
     public $pagePag = '10';
     public $search = '';
     public $carbon;
+    protected $queryString = 
+    ['search' => ['except' => ''],
+    'pagePag'
+    ];
+
     
     public function render()
     {   
