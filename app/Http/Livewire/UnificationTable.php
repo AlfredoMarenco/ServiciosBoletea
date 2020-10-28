@@ -30,8 +30,7 @@ class UnificationTable extends Component
             ->orWhere('descripcion', 'LIKE', "%{$this->search}%")
             ->orWhere('created_at', 'LIKE', "%{$this->search}%")
             ->orderBy('created_at','DESC')
-            ->paginate($this->pagePag),
-            'carbon' => new Carbon()
+            ->paginate($this->pagePag)
         ]);
     }
 }
