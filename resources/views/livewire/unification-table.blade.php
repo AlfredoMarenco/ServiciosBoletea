@@ -63,7 +63,7 @@
                                     </span>
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-500">
-                                        {{ $registro->created_at }}
+                                        {{ $registro->created_at}}
                                 </tr>
                                 @endforeach
                                 </tbody>
