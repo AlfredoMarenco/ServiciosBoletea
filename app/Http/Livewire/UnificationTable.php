@@ -24,6 +24,9 @@ class UnificationTable extends Component
             ->orWhereHas('user', function (Builder $query) {
                 $query->where('name', 'like', "%{$this->search}%");
             })
+            ->orWhereHas('user', function (Builder $query) {
+                $query->where('email', 'like', "%{$this->search}%");
+            })
             ->orWhere('descripcion', 'LIKE', "%{$this->search}%")
             ->orWhere('created_at', 'LIKE', "%{$this->search}%")
             ->orderBy('created_at','DESC')
