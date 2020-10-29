@@ -31,7 +31,7 @@
                                 class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                                 name="asesor_id" id="asesor_id">
                                 @foreach($asesores as $asesor)
-                                    <option value="{{ $asesor->id }}" {{ $clientUnification->asesor_id === $asesor->id ? 'selected' : '' }}>{{ $asesor->name }}</option>
+                                    <option value="{{ $asesor->id }}" {{ $clientUnification->asesor_id == $asesor->id ? 'selected' : '' }}>{{ $asesor->name }}</option>
                                 @endforeach
                             </select>
                             <input type="hidden" class="form-control" name="user_id" value="{{ auth()->id() }}">
