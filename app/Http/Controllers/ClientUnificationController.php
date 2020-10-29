@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Asesor;
 use App\Models\ClientUnification;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ClientUnificationController extends Controller
@@ -74,9 +75,13 @@ class ClientUnificationController extends Controller
      */
     public function edit($clientUnification)
     {
+        $user_id = User::findOrFail(auth()->id());
         $clientUnification = ClientUnification::findOrFail($clientUnification);
-        $asesores = Asesor::all();
-        return view('admin.unification.form-edit', compact('clientUnification', 'asesores'));
+        if ($user_id->id == $clientUnification->user_id) {
+            $asesores = Asesor::all();
+            return view('admin.unification.form-edit', compact('clientUnification', 'asesores'));
+        }
+        return view('errors.error-notpermision');
     }
 
     /**
