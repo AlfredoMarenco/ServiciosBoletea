@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Models\ClientUnification;
+use App\Models\User;
 use Carbon\Carbon;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -35,7 +36,8 @@ class UnificationTable extends Component
             ->orWhere('descripcion', 'LIKE', "%{$this->search}%")
             ->orWhere('created_at', 'LIKE', "%{$this->search}%")
             ->orderBy('created_at','DESC')
-            ->paginate($this->pagePag)
+            ->paginate($this->pagePag),
+            'user' => User::findOrFail(auth()->id())
         ]);
     }
 }

@@ -20,7 +20,7 @@ class ClientUnificationController extends Controller
      */
     public function index()
     {
-        $registros = ClientUnification::orderBy('created_at','DESC')->paginate(10);
+        $registros = ClientUnification::orderBy('created_at', 'DESC')->paginate(10);
         return view('admin.unification.index', compact('registros'));
     }
 
@@ -32,7 +32,7 @@ class ClientUnificationController extends Controller
     public function create()
     {
         $asesores = Asesor::all();
-        return view('admin.unification.form-add',compact('asesores'));
+        return view('admin.unification.form-add', compact('asesores'));
     }
 
     /**
@@ -43,13 +43,18 @@ class ClientUnificationController extends Controller
      */
     public function store(Request $request)
     {
-        $nuevoRegistro = new ClientUnification;
-        $nuevoRegistro->descripcion = $request->descripcion;
-        $nuevoRegistro->asesor_id = $request->asesor_id;
-        $nuevoRegistro->user_id = $request->user_id;
 
-        $nuevoRegistro->save();
-        return redirect('admin/unification');
+        try {
+            $nuevoRegistro = new ClientUnification;
+            $nuevoRegistro->descripcion = $request->descripcion;
+            $nuevoRegistro->asesor_id = $request->asesor_id;
+            $nuevoRegistro->user_id = $request->user_id;
+
+            $nuevoRegistro->save();
+            return redirect('admin/unification');
+        } catch (\Throwable $th) {
+            return view('errors.error-store');
+        }
     }
 
     /**
@@ -65,13 +70,13 @@ class ClientUnificationController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\ClientUnification  $clientUnification
      * @return \Illuminate\Http\Response
      */
-    public function edit(ClientUnification $clientUnification)
+    public function edit($clientUnification)
     {
-        //
+        $clientUnification = ClientUnification::findOrFail($clientUnification);
+        $asesores = Asesor::all();
+        return view('admin.unification.form-edit', compact('clientUnification', 'asesores'));
     }
 
     /**
@@ -81,9 +86,18 @@ class ClientUnificationController extends Controller
      * @param  \App\Models\ClientUnification  $clientUnification
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ClientUnification $clientUnification)
+    public function update(Request $request, $clientUnification)
     {
-        //
+        try {
+            $update = clientUnification::findOrFail($clientUnification);
+            $update->descripcion = $request->descripcion;
+            $update->asesor_id = $request->asesor_id;
+            $update->user_id = $request->user_id;
+            $update->save();
+            return redirect('admin/unification');
+        } catch (\Throwable $th) {
+            return view('errors.error-update');
+        }
     }
 
     /**
