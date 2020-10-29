@@ -54,7 +54,7 @@
                                         </div>
                                     </div>
                                     </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap">
+                                    <td class="px-6 py-4">
                                     <div class="text-sm leading-5 text-gray-900">{{ $registro->descripcion }}</div>
                                     </td>
                                     <td class="px-6 py-4 whitespace-no-wrap">
