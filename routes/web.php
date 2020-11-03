@@ -30,6 +30,7 @@ Route::resource('admin/unification', ClientUnificationController::class)
             'show' => 'unification.show'
 ]);
 
+Route::any('/openpay/webhook', [WebhookController::class ,'handle']);
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
