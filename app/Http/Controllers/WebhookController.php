@@ -11,7 +11,7 @@ class WebhookController extends Controller
     {
         $openpay = Openpay::getInstance('m4gx48zqyw8xs4en1z1u', 'sk_d70ffc17846544e39488869d11fac3dc');
         $webhook = array(
-            'url' => 'https://servicios.boletea.com/openpay/webhook',
+            'url' => 'https://servicios.boletea.com/public/openpay/webhook',
             'event_types' => array(
                 'charge.refunded',
                 'charge.failed',
