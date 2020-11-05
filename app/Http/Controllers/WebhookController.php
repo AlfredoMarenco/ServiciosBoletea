@@ -21,6 +21,7 @@ class WebhookController extends Controller
             )
         );
         $webhook = $openpay->webhooks->add($webhook);
-        return $webhook;
+        return response()
+            ->view('welcome', 200);
     }
 }
